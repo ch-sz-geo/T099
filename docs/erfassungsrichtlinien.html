@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="author" content="[.subtitle]#&lt;Untertitel der Dokumentation&gt;# +">
+<title>Erfassungsrichtlinie</title>
+<link rel="stylesheet" href="https://ch-sz-geo.github.io/Test_DefaultDesign/themes/style_entry.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
+</head>
+<body class="book toc2 toc-left img-logo">
+<div id="header">
+<h1>Erfassungsrichtlinie</h1>
+<div class="details">
+<span id="author" class="author">[.subtitle]#&lt;Untertitel der Dokumentation&gt;# +</span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Inhalt</div>
+<ul class="sectlevel1">
+<li><a href="#_kapitel_2">1. Kapitel 2</a>
+<ul class="sectlevel2">
+<li><a href="#_topic_stammdaten">1.1. Topic Stammdaten</a>
+<ul class="sectlevel3">
+<li><a href="#_klasse_katalogeintrag">1.1.1. Klasse Katalogeintrag</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://ch-sz-geo.github.io/A000_entrypage/">zur Hauptseite</a><br></p>
+</li>
+<li>
+<p><a href="https://amandawetter.github.io/A000_Rebuild/">Übersicht AXXX Dokumentation</a><br></p>
+</li>
+<li>
+<p><a href="https://amandawetter.github.io/A000_Rebuild/docs/erfassungsrichtlinien.pdf">Erfassungsrichtlinie als Pdf</a><br></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_kapitel_2"><a class="anchor" href="#_kapitel_2"></a><a class="link" href="#_kapitel_2">1. Kapitel 2</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_topic_stammdaten"><a class="anchor" href="#_topic_stammdaten"></a><a class="link" href="#_topic_stammdaten">1.1. Topic Stammdaten</a></h3>
+<div class="paragraph">
+<p>INTERLIS kennt den Datentyp «Aufzählung», bei dem die Werte im Modell definiert werden. Änderungen an dieser Werteliste (z.B. Umbenennung, Hinzufügen oder Streichen) führen zu Änderungen am Datenmodell und damit zu hohem Nachführungsaufwand. Um dem entgegenzuwirken, sind neu alle Aufzählwerte als Stammdaten im gleichnamigen Topic modelliert. Jede Aufzählung erhält eine eigene Klasse. Die Summe aller Einträge einer Klasse bildet den Umfang der Aufzählung. Durch dieses Modellierungsmuster bleibt das Datenmodell bei Änderungen der Werteliste unverändert.<br></p>
+</div>
+<div class="paragraph">
+<p>Die Daten des Topics Stammdaten werden zur Verfügung gestellt und sind statisch. Sie dürfen NICHT verändert werden. Die Nachführung der Kataloge erfolgt stets durch die katasterverantwortliche Stelle.</p>
+</div>
+<div class="sect3">
+<h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">1.1.1. Klasse Katalogeintrag</a></h4>
+<div class="paragraph">
+<p>Die Klasse Katalogeintrag enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt damit keine Objekte Katalogeintrag, sondern nur Objekte von den spezialisierten Klassen.<br></p>
+</div>
+<div class="paragraph">
+<p>Allgemeingültige Attributbeschreibungen sind auf der Klasse Katalogeintrag aufgeführt. Detailliertere Angaben zu den Attributen sind bei den jeweiligen Klassen zu finden.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Allgemeines</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vererbung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Attribute dieser Klasse werden vererbt.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objektkennung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Objekte dieser Klasse weisen eine eineindeutige, über die Zeit stabile Objektidentifikation (OID) vom Typ UUID auf. Es sind die Regeln gemäss INTERLIS-Referenzhandbuch zu beachten</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-04-28 12:48:35 UTC
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+</body>
+</html>

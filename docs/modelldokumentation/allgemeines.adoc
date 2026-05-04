@@ -1,0 +1,26 @@
+== Allgemeines
+=== Ziel und Zweck
+Dieses Dokument beschreibt den Geobasisdatensatz
+ 
+* *__<Hier_Themenname_eingeben>__.*
+
+__<weitere Beschreibungen>__
+
+Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters.
+
+=== rechtliche Grundlagen
+Seit dem 1. Juli 2008 ist das Bundesgesetz über Geoinformation (GeoIG, SR 510.62) <<allgemeines.adoc#doc-01,[1]>> in Kraft. Am 1. Juli 2012 erfolgte die vollständige Inkraftsetzung des kantonalen Geoinformationsgesetzes (kGeoiG, SRSZ 214.110) <<allgemeines.adoc#doc-03,[3]>>. Es hat zum Ziel, verbindliche Vorgaben für die Erfassung, Modellierung und den Austausch von Geodaten festzulegen.
+
+Am 1. Januar 2013 trat die kantonale Verordnung über Geoinformation (kGeoiV, SRSZ 214.111) <<allgemeines.adoc#doc-04,[4]>> in Kraft. Sie präzisiert das kGeoiG in fachlicher sowie technischer Hinsicht und führt im Anhang 1 den „Katalog der Geobasisdaten des Bundesrechts mit Zuständigkeit beim Kanton“ und im Anhang 2 den „Katalog der Geobasisdaten des kantonalen Rechts“. Darin werden die Fachstellen definiert, welche für die Ausarbeitung eines Geodatenmodells zuständig sind.
+
+=== Zielgruppen
+Dieses Dokument richtet sich an folgende Nutzergruppen:
+
+* **Fachstellen für Modellierung,** die den inhaltlichen Rahmen des Themas festlegen,
+* **Datenbearbeiterinnen und -bearbeiter,** die sich über die Prozesse und Methoden der Datenpflege informieren,
+* **Verantwortliche für die Datenpublikation,** die die Daten entsprechend der Freigabestufe veröffentlichen und die Transformation in andere Modelle durchführen sowie
+* **Endnutzerinnen und Endnutzer,** die sich über den Inhalt und die Struktur der Daten informieren möchten.
+
+ifdef::backend-pdf[]
+<<<
+endif::[]

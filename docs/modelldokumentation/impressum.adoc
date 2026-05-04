@@ -1,0 +1,33 @@
+[discrete]
+=== Impressum
+
+.Erstellung
+[%collapsible]
+====
+[cols="1, 3"]
+|===
+| Erstelldatum | 2024-01-01
+| letzte Änderung | {docdate}
+| Themen-Nummer | Annn
+| ID nach kGeoiV | --- 
+| Beteiligte | Person 1, Fachexperte (Kürzel 1), Amt 1 + 
+Kuno Epper, Modellierer (kep), Amt für Geoinformation
+|===
+====
+
+.referenzierte Dokumente
+[%collapsible]
+====
+[cols="10%, 90%"]
+|===
+h| Nr h| Dokument
+| [[doc-01]] [01] | _Bundesgesetz über Geoinformation_ (GeoIG) vom 9. Oktober 2007, SR 510.62. https://www.fedlex.admin.ch/eli/cc/2008/388/de[Link]
+| [[doc-02]] [02] | _Verordnung über Geoinformation_ (GeoIV) vom 21. Mai 2008, SR 510.620. https://www.fedlex.admin.ch/eli/cc/2008/389/de[Link]
+| [[doc-03]] [03] | _kantonales Geoinformationsgesetz_ (kGeoiG) vom 24. Juni 2010, SRSZ 214.110. https://www.sz.ch/public/upload/assets/48275/214_110.pdf?fp=2[Link]
+| [[doc-04]] [04] | _Verordnung zum kantonalen Geoinformationsgesetz_ (kGeoiV) vom 18. Dezember 2012, SRSZ 214.111. https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11[Link]
+|===
+====
+
+ifdef::backend-pdf[]
+<<<
+endif::[]

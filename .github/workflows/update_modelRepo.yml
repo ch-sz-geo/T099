@@ -1,0 +1,149 @@
+name: Detect Model Changes
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'models/**'
+
+
+jobs:
+  validate-iliModels:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }} # checks out the branch that triggered the action (PR source)
+          
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'adopt'
+      - name: ili2cInstalation
+        uses: ch-sz-geo/interlis-setup-action/setup-iliCompiler@v1
+        with:
+          path: ../ili2c
+      - name: verify java Version
+        run: java --version
+      - name: Validate the Interlis Models
+        run: |
+          for file in models/*; do
+            java -jar ../ili2c/ili2c.jar "$file"
+          done
+
+  detect-changes:
+    needs: validate-iliModels
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important: fetches full history, not just latest commit
+
+      - name: Generate GitHub App Token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}  # scopes token to whole org
+          repositories: "Test_models"
+          
+      - name: Debug token scope
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          # Lists repos the token can actually access
+          gh api /installation/repositories --jq '.repositories[].full_name'
+          
+      - name: Print all changed files in models/
+        id: changes
+        run: |
+          echo "======================================"
+          echo "Changed files in models/ folder:"
+          echo "======================================"
+          
+          # Get all commits in this push
+          COMMITS="${{ github.event.before }}".."${{ github.sha }}"
+
+          add=()
+          modify=()
+          delete=()
+          rename=()
+          
+          # Loop through each changed file in models/
+          git diff --name-status $COMMITS -- models/ > /tmp/changed_files.txt
+          git diff --name-status $COMMITS -- models/
+          while read line; do
+            STATUS=$(echo "$line" | cut -f1)
+            FILE=$(echo "$line" | cut -f2)
+
+            case "$STATUS" in
+              A)  add+=("$FILE") ;;
+              M)  modify+=("$FILE") ;;   
+              D)  delete="$FILE" ;;
+              R*) rename="$FILE -> $(echo "$line" | cut -f3)" ;;
+              *)  echo " UNKNOWN ($STATUS): $FILE" ;
+                  exit 1;
+            esac
+          done < /tmp/changed_files.txt
+
+          # Join arrays into comma-separated strings
+          add_str=$(IFS=,; echo "${add[*]}") 
+          modify_str=$(IFS=,; echo "${modify[*]}")
+          delete_str=$(IFS=,; echo "${delete[*]}")
+          rename_str=$(IFS=,; echo "${rename[*]}")
+          
+          echo "add=$add_str" >> "$GITHUB_OUTPUT"
+          echo "modify=$modify_str" >> "$GITHUB_OUTPUT"
+          echo "delete=$delete_str" >> "$GITHUB_OUTPUT"
+          echo "rename=$rename_str" >> "$GITHUB_OUTPUT"
+
+          echo "add: $add_str"
+          echo "modify: $modify_str"
+          echo "delete: $delete_str"
+          echo "rename: $rename_str"
+
+          echo "======================================"
+          echo "Commits included in this push:"
+          echo "======================================"
+          git log --oneline $COMMITS
+
+      - name: Trigger the IliModelRepo action
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          payload=$(jq -n \
+            --arg repo "${{ github.repository }}" \
+            --arg sha  "${{ github.sha }}" \
+            --arg ref  "main" \
+            --arg add  "${{ steps.changes.outputs.add }}" \
+            --arg mod  "${{ steps.changes.outputs.modify }}" \
+            --arg del  "${{ steps.changes.outputs.delete }}" \
+            --arg ren  "${{ steps.changes.outputs.rename }}" \
+            '{event_type: "update", client_payload: {repo: $repo, sha: $sha, ref: $ref, add: $add, modify: $mod, delete: $del, rename: $ren}}')
+
+          # sends out a dispatch call to the Test_models Repository
+          response=$(curl -s -w "\n%{http_code}" \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            https://api.github.com/repos/ch-sz-geo/Test_models/dispatches \
+            -d "$payload")
+            
+          #This section is to fail the task when the dispach to the target repo didn't work
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | head -n -1)
+          
+          echo "HTTP Status: $http_code"
+          echo "Response: $body"
+          
+          if [ "$http_code" -ne 204 ]; then
+            echo "::error::Dispatch failed with status $http_code: $body"
+            exit 1
+          fi
+            

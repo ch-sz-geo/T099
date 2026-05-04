@@ -1,0 +1,50 @@
+// Hier den Titel eingeben
+:title: Erfassungsrichtlinie 
+:subtitle: <Untertitel der Dokumentation>
+ifdef::backend-pdf[]
+= {title}
+{subtitle}
+// :title-logo-image: image:../../themes/header_sz_pdf.PNG[top=-10%,align=center,width=fill]
+// :pdf-theme: ../../themes/pdf-theme.yml
+// :pdf-fontsdir: fonts/
+endif::[]
+ifndef::env-github[:toc: left]
+:toc-title: Inhalt
+:toclevels: 3
+:figure-caption: Abbildung
+:table-caption: Tabelle
+:note-caption: Hinweis
+:data-uri:
+:source-highlighter: highlight.js
+:sectnums:
+:sectnumlevels: 5
+:sectlinks:
+:sectanchors:
+// :includedir: docs
+:stylesheet: ../../themes/stylesheet.css
+:doctype: book
+:!chapter-signifier:
+
+// Todo Header Styling und Environment ändern auf Doc. Header auf der Webseite muss auf andere Weise integriert werden
+
+ifndef::env-github,backend-pdf[]
+[.img-logo]
+// image:{includedir}/img/logo_kt_sz_rgb.jpg[]
+// image:../../themes/logo_kt_sz_rgb.jpg[]
+
+= {title}
+[.subtitle]#{subtitle}# +
+
+****
+
+* https://ch-sz-geo.github.io/A000_entrypage/[zur Hauptseite] +
+* https://amandawetter.github.io/A000_Rebuild/[Übersicht AXXX Dokumentation] +
+* https://amandawetter.github.io/A000_Rebuild/docs/erfassungsrichtlinien.pdf[Erfassungsrichtlinie als Pdf] +
+
+****
+endif::[]
+
+// Die Verwiese auf die Inhalte der Dokumentation sollen im README auf Github nicht angezeigt werden.
+ifndef::env-github[]
+include::./kapitel2.adoc[]
+endif::[]

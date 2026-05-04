@@ -1,0 +1,56 @@
+// Hier den Titel eingeben
+:title: <Hier_Themenname_eingeben> (<Hier_Themennummer_eingeben>)
+:subtitle: Modelldokumentation
+ifdef::backend-pdf[]
+= {title}
+{subtitle}
+// :title-logo-image: image:../../themes/header_sz_pdf.png[top=-10%,align=center,width=fill]
+// :pdf-theme: ../../themes/pdfTheme.yml
+// :pdf-fontsdir: fonts/
+endif::[]
+ifndef::env-github[:toc: left]
+:toc-title: Inhalt
+:toclevels: 3
+:figure-caption: Abbildung
+:table-caption: Tabelle
+:note-caption: Hinweis
+:data-uri:
+:source-highlighter: highlight.js
+:sectnums:
+:sectnumlevels: 5
+:sectlinks:
+:sectanchors:
+// :includedir: docs
+// :stylesheet: ../../themes/stylesheet.css
+:doctype: book
+:!chapter-signifier:
+
+// Todo Header Styling und Environment ändern auf Doc. Header auf der Webseite muss auf andere Weise integriert werden
+
+ifndef::env-github,backend-pdf[]
+:myImage: https://ch-sz-geo.github.io/A000_defaultDesign/themes/logo_kt_sz_rgb.jpg
+[.img-logo]
+image:{myImage}[logo kt sz rgb]
+
+= {title}
+[.subtitle]#{subtitle}# +
+
+//****
+
+//* https://ch-sz-geo.github.io/A000_entrypage/[zur Startseite] +
+//* https://amandawetter.github.io/A000_Rebuild/[Übersicht <Hier_Themennummer_eingeben> Dokumentation] +
+//* https://amandawetter.github.io/A000_Rebuild/docs/modelldokumentation.pdf[Dokumentation als PDF] +
+
+//****
+
+endif::[]
+
+// Die Verwiese auf die Inhalte der Dokumentation sollen im README auf Github nicht angezeigt werden.
+ifndef::env-github[]
+include::./impressum.adoc[]
+include::./allgemeines.adoc[]
+include::./modellbeschreibung.adoc[]
+include::./diagramme.adoc[]
+include::./klassenbeschreibung.adoc[]
+include::./transformation.adoc[]
+endif::[]

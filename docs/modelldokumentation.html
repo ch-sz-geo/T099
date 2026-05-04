@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>&lt;Hier_Themenname_eingeben&gt; (&lt;Hier_Themennummer_eingeben&gt;)</title>
+<link rel="stylesheet" href="https://ch-sz-geo.github.io/Test_DefaultDesign/themes/stylesheet.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<div id="toc" class="toc2">
+<div id="toctitle">Inhalt</div>
+<ul class="sectlevel0">
+<li><a href="#_hier_themenname_eingeben_hier_themennummer_eingeben">&lt;Hier_Themenname_eingeben&gt; (&lt;Hier_Themennummer_eingeben&gt;)</a>
+<ul class="sectlevel1">
+<li><a href="#_allgemeines">1. Allgemeines</a>
+<ul class="sectlevel2">
+<li><a href="#_ziel_und_zweck">1.1. Ziel und Zweck</a></li>
+<li><a href="#_rechtliche_grundlagen">1.2. rechtliche Grundlagen</a></li>
+<li><a href="#_zielgruppen">1.3. Zielgruppen</a></li>
+</ul>
+</li>
+<li><a href="#_modellbeschreibung">2. Modellbeschreibung</a></li>
+<li><a href="#_diagramme">3. Diagramme</a>
+<ul class="sectlevel2">
+<li><a href="#_komponentendiagramm">3.1. Komponentendiagramm</a></li>
+<li><a href="#_klassendiagramm">3.2. Klassendiagramm</a></li>
+</ul>
+</li>
+<li><a href="#_klassenbeschreibung">4. Klassenbeschreibung</a>
+<ul class="sectlevel2">
+<li><a href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a>
+<ul class="sectlevel3">
+<li><a href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></li>
+<li><a href="#_klasse_standard_katalogeintrag">4.1.2. Klasse <code>Standard-Katalogeintrag</code></a></li>
+<li><a href="#_klasse_separate_stammdaten">4.1.3. Klasse <code>separate Stammdaten</code></a></li>
+</ul>
+</li>
+<li><a href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a>
+<ul class="sectlevel3">
+<li><a href="#_klasse_klasse1">4.2.1. Klasse <code>Klasse1</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_modelltransformationen">5. Modelltransformationen</a>
+<ul class="sectlevel2">
+<li><a href="#_transformation_vom_bearbeitungsmodell_ins_publikationsmodell">5.1. Transformation vom Bearbeitungsmodell ins Publikationsmodell</a></li>
+<li><a href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.2. Transformation ins minimale Geodatenmodell des Bundes</a></li>
+<li><a href="#_transformation_ins_transfermodell_öreb_kataster">5.3. Transformation ins Transfermodell ÖREB-Kataster</a>
+<ul class="sectlevel3">
+<li><a href="#_klasse_darstellungsdienst">5.3.1. Klasse <code>DarstellungsDienst</code></a></li>
+<li><a href="#_klasse_eigentumsbeschraenkung">5.3.2. Klasse <code>Eigentumsbeschraenkung</code></a></li>
+<li><a href="#_klasse_geometrie">5.3.3. Klasse <code>Geometrie</code></a></li>
+<li><a href="#_klasse_legendeeintrag">5.3.4. Klasse <code>LegendeEintrag</code></a></li>
+</ul>
+</li>
+<li><a href="#_transformation_ins_webgis">5.4. Transformation ins WebGIS</a>
+<ul class="sectlevel3">
+<li><a href="#_allgemeines_2">5.4.1. Allgemeines</a></li>
+<li><a href="#_tabelle_der_waldgrenze">5.4.2. Tabelle der <code>Waldgrenze</code></a></li>
+<li><a href="#_tabelle_der_stockgrenze">5.4.3. Tabelle der <code>Stockgrenze</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph img-logo">
+<p><span class="image"><img src="https://ch-sz-geo.github.io/A000_defaultDesign/themes/logo_kt_sz_rgb.jpg" alt="logo kt sz rgb"></span></p>
+</div>
+</div>
+</div>
+<h1 id="_hier_themenname_eingeben_hier_themennummer_eingeben" class="sect0"><a class="anchor" href="#_hier_themenname_eingeben_hier_themennummer_eingeben"></a><a class="link" href="#_hier_themenname_eingeben_hier_themennummer_eingeben">&lt;Hier_Themenname_eingeben&gt; (&lt;Hier_Themennummer_eingeben&gt;)</a></h1>
+<div class="openblock partintro">
+<div class="content">
+<div class="paragraph">
+<p><span class="subtitle">Modelldokumentation</span><br></p>
+</div>
+<h3 id="_impressum" class="discrete">Impressum</h3>
+<details>
+<summary class="title">Erstellung</summary>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erstelldatum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-01</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2026-04-28</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Annn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ID nach kGeoiV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">---</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beteiligte</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Person 1, Fachexperte (Kürzel 1), Amt 1<br>
+Kuno Epper, Modellierer (kep), Amt für Geoinformation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details>
+<summary class="title">referenzierte Dokumente</summary>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 90%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Nr</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Dokument</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="doc-01"></a> [01]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Bundesgesetz über Geoinformation</em> (GeoIG) vom 9. Oktober 2007, SR 510.62. <a href="https://www.fedlex.admin.ch/eli/cc/2008/388/de">Link</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="doc-02"></a> [02]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Verordnung über Geoinformation</em> (GeoIV) vom 21. Mai 2008, SR 510.620. <a href="https://www.fedlex.admin.ch/eli/cc/2008/389/de">Link</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="doc-03"></a> [03]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>kantonales Geoinformationsgesetz</em> (kGeoiG) vom 24. Juni 2010, SRSZ 214.110. <a href="https://www.sz.ch/public/upload/assets/48275/214_110.pdf?fp=2">Link</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="doc-04"></a> [04]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Verordnung zum kantonalen Geoinformationsgesetz</em> (kGeoiV) vom 18. Dezember 2012, SRSZ 214.111. <a href="https://www.sz.ch/public/upload/assets/5600/214_111.pdf?fp=11">Link</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_allgemeines"><a class="anchor" href="#_allgemeines"></a><a class="link" href="#_allgemeines">1. Allgemeines</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ziel_und_zweck"><a class="anchor" href="#_ziel_und_zweck"></a><a class="link" href="#_ziel_und_zweck">1.1. Ziel und Zweck</a></h3>
+<div class="paragraph">
+<p>Dieses Dokument beschreibt den Geobasisdatensatz</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong><em>&lt;Hier_Themenname_eingeben&gt;</em>.</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>&lt;weitere Beschreibungen&gt;</em></p>
+</div>
+<div class="paragraph">
+<p>Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rechtliche_grundlagen"><a class="anchor" href="#_rechtliche_grundlagen"></a><a class="link" href="#_rechtliche_grundlagen">1.2. rechtliche Grundlagen</a></h3>
+<div class="paragraph">
+<p>Seit dem 1. Juli 2008 ist das Bundesgesetz über Geoinformation (GeoIG, SR 510.62) <a href="#doc-01">[1]</a> in Kraft. Am 1. Juli 2012 erfolgte die vollständige Inkraftsetzung des kantonalen Geoinformationsgesetzes (kGeoiG, SRSZ 214.110) <a href="#doc-03">[3]</a>. Es hat zum Ziel, verbindliche Vorgaben für die Erfassung, Modellierung und den Austausch von Geodaten festzulegen.</p>
+</div>
+<div class="paragraph">
+<p>Am 1. Januar 2013 trat die kantonale Verordnung über Geoinformation (kGeoiV, SRSZ 214.111) <a href="#doc-04">[4]</a> in Kraft. Sie präzisiert das kGeoiG in fachlicher sowie technischer Hinsicht und führt im Anhang 1 den „Katalog der Geobasisdaten des Bundesrechts mit Zuständigkeit beim Kanton“ und im Anhang 2 den „Katalog der Geobasisdaten des kantonalen Rechts“. Darin werden die Fachstellen definiert, welche für die Ausarbeitung eines Geodatenmodells zuständig sind.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zielgruppen"><a class="anchor" href="#_zielgruppen"></a><a class="link" href="#_zielgruppen">1.3. Zielgruppen</a></h3>
+<div class="paragraph">
+<p>Dieses Dokument richtet sich an folgende Nutzergruppen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Fachstellen für Modellierung,</strong> die den inhaltlichen Rahmen des Themas festlegen,</p>
+</li>
+<li>
+<p><strong>Datenbearbeiterinnen und -bearbeiter,</strong> die sich über die Prozesse und Methoden der Datenpflege informieren,</p>
+</li>
+<li>
+<p><strong>Verantwortliche für die Datenpublikation,</strong> die die Daten entsprechend der Freigabestufe veröffentlichen und die Transformation in andere Modelle durchführen sowie</p>
+</li>
+<li>
+<p><strong>Endnutzerinnen und Endnutzer,</strong> die sich über den Inhalt und die Struktur der Daten informieren möchten.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modellbeschreibung"><a class="anchor" href="#_modellbeschreibung"></a><a class="link" href="#_modellbeschreibung">2. Modellbeschreibung</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>&lt;Beschreibung einfügen&gt;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_diagramme"><a class="anchor" href="#_diagramme"></a><a class="link" href="#_diagramme">3. Diagramme</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_komponentendiagramm"><a class="anchor" href="#_komponentendiagramm"></a><a class="link" href="#_komponentendiagramm">3.1. Komponentendiagramm</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QL0RXhpZgAATU0AKgAAAAgABAE7AAIAAAAOAAABSodpAAQAAAABAAABWJydAAEAAAAcAAAC0OocAAcAAAEMAAAAPgAAAAAc6gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQW1hbmRhIFdldHRlcgAABZADAAIAAAAUAAACppAEAAIAAAAUAAACupKRAAIAAAADNjgAAJKSAAIAAAADNjgAAOocAAcAAAEMAAABmgAAAAAc6gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAyNDowMTozMCAwODoxNToxNwAyMDI0OjAxOjMwIDA4OjE1OjE3AAAAQQBtAGEAbgBkAGEAIABXAGUAdAB0AGUAcgAAAP/hBCBodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+DQo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj48cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIi8+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iPjx4bXA6Q3JlYXRlRGF0ZT4yMDI0LTAxLTMwVDA4OjE1OjE3LjY4MTwveG1wOkNyZWF0ZURhdGU+PC9yZGY6RGVzY3JpcHRpb24+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPjxkYzpjcmVhdG9yPjxyZGY6U2VxIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+PHJkZjpsaT5BbWFuZGEgV2V0dGVyPC9yZGY6bGk+PC9yZGY6U2VxPg0KCQkJPC9kYzpjcmVhdG9yPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERj48L3g6eG1wbWV0YT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3hwYWNrZXQgZW5kPSd3Jz8+/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAxQEaAwEiAAIRAQMRAf/EABwAAQACAwEBAQAAAAAAAAAAAAAFBwMEBgIBCP/EAFEQAAAFAgIEBREEBwcCBwAAAAABAgMEBREGEhMWITEVQVWR0wcUIjVRUlNWYXOSk5SWs9HSMlRxsiMzNjdCdYEXJHSVobXBJbE0V2Jyg6LU/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECAwQF/8QALBEBAAIBAwMDAgUFAAAAAAAAAAECEQMSFCExUQQTQSLwMnGh0fEzYWKB4f/aAAwDAQACEQMRAD8A/VI8G4gt6i5x7PcOZw/RqXJp2mk02E66t541LcYSpR/pVbzMgHRaVvv084aVvv084j9X6NyRTvZkfINX6NyRTvZkfIBIaVvv084aVvv084remVmDVadFqFO6m9UehymkvsuE1Tk50KK5HY5BGVyPjK42+u2v/LCqerpn/wCgZ76eYTiXe6Vvv084aVvv084rmpViFTqfKmzOprVGosVpTzy9DTTyoSRmo7FIuewj3DsmaHRHWkOJpFPIlpJRXjI4/wCgtFot2lCU0rffp5w0rffp5xH6v0bkinezI+Qav0bkinezI+QsJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJDSt9+nnDSt9+nnEfq/RuSKd7Mj5Bq/RuSKd7Mj5AJMlErcZGPo4bAk1alOxSIktMuLQlJFYiIlHsHcgB7hEYW7TN+de+KoS57hEYW7TN+de+KoBLgAAKq6muNsKxOp5hiNKxNQ2JDNNjocadqDSVIUTZEZGRquRkfEOo1/wb424f/wAyZ+oa/UrabPqZ4UM20mZ0uN/CXg0jqdC14NHokPHvt3S0V7j7HGFJGBMSMR8UUJ192myUNtt1BpSlqNpRERESrmZnxCfhY/wamFHSrFmHiMm0kZHUmdmz/wBw6PQteDR6JBoWvBo9Ehrpa8acYiETGUJ/aBgzxuw9/mTP1B/aBgzxuw9/mTP1Cb0LXg0eiQaFrwaPRIa8z/FG1Cf2g4M8bsPf5kz9QnYMuPPhsyoT7UmM8kltutLJaFpPcZGWwyHnQteDR6JDn+pT+7rD/wDhUjbR1vcz0RMYdYAAOhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArrAXbCV59f5jFiiusBdsJXn1/mMWKAHuERhbtM35174qhLnuERhbtM35174qgEuAAApmBIkRup/1JnYUVUuRnjEhlKyRnM6e+RXUe5JbzPaZER2IzsRyrk5bNGKYzNmFiOfKTEkpZjNnKStKVL63aQ4rRtkkiNRZjUk05lEalLJRy/UzjMSOpvgtb7SHFx6fGdZUpNzbXoMuYu4eVSi/AzE/UaLS6mmSmoU+NJTIQlt4nWyVpEpMzSR332MzMvxHkWtGWiqKRiCZValQcQSasuOzFp9ZSs3WmloUlh1tJOOE3e5mRJUom1EV09jYjO6RiGoTGazSZzs904jtJk5p6I6Hkm5NSWWzB2JOVKTLN2XZHxWFqJw9R0Pxnk0yITkVbrjCiZK7SnP1hp7hq4+6McTDNEhsqaiUmC02rJdKGEkR5Vm4nmWZqLuGdxO+vgcrDrdVVWIkxU1SosqtSKQcLRI0baG9NZwlZc+c9CV7qMuyPZutBx8Y1thiBUHanHkpm0OZVzp6mUEbK20oNBEabK0e0yK+297qPZazW6HSm6yurIp8VNScTlVKJotIotmzNv4iEFQMERaVW3qo7LclyXNJbNHYaJJuWzmejQnMZ5U/avu8piItUafU9qlbmVKSxVk1DQHFakNqqBRUO5lGojJKWD/V2IrGor3vtEx1Kf3dUD/CpElRqJS6Kh1FIp8aEl1WdwmGyRmV3TsI3qU/u6oH+FSOr0kxM2wrZ1gAA7VQAAAAAAAAAABrzeuTbJETKlajsbitpILu24z8gxwpalrVHlJJuWgrmRbll3yfJ/2EZ64XikzXdDcAAEqAAAAAAAAAAAAAAAAArrAXbCV59f5jFiiusBdsJXn1/mMWKAHuERhbtM35174qhLnuERhbtM35174qgEuAAA43qV/uywp/K4vw0jqhw2HaDjKh0GnUmNUsPuMQY6Iza3IT2ZSUJJJGdnbX2CS62xv9/wAN+xP9KPMt6a8zMr5h04DmOtsb/f8ADfsT/SiCn1rFkLFFPojk7DenltmvN1m/2B7cibaTbmJDpl3NGd95COLqGYWIA5jrbG/3/DfsT/Sh1tjf7/hv2J/pQ4uoZh045vqU/u6w/wD4VI8da43+/wCG/Yn+lHG4JruJcOyJGEahS6bMXSSbQy8zJUwuQypJmlSULSZKUdlFYlFtIy8o6vTaNtPO5EzlcICBo+JG6jL60fp1Tp0pSTWhqYxbOkt5kpJqT/QzI/IJ4dSoAAAAAAADyhxDhrJtaVGg8qrHex9wxp1y/Bjv2sl06TLv0eYs/wD9biJnEZXpTdaK+XtupQnHiaRJaUszykRHsM+4R7jMeKuhnrXSvLU2ts7tuIK6kq3ERFx33W4xqEtp5lE2Vlap7VlMM2+13FGXd71P/O6ShG8qK2qURE8q6jT3tzuRf0KxCsTu6S2tWNOYtX4+/wCWCmty1EUieqzykkWhQfYIL/k/Lxbi7p7wALRGGF7bpyAACVQAAAAAAAAAAAABXWAu2Erz6/zGLFFdYC7YSvPr/MYsUAPcIjC3aZvzr3xVCXPcIjC3aZvzr3xVAJcAAAAAABVTiU1qBPrLCjXX5i3J1FSnetmKdmiQZ7kuJXtIzL/xC919lqiDkUXSYlpFTaWhtqDGkR9ESbX0htGVu4RaM+cBvUaoM1SlRJ8ZaXGZLSXEKTexkZX4xvDG2hLSCQhKUoSViSkrERDIADgOqLhdVTqNHrEWntz3o7hRZkZWUtPFWfZbTLehVlFu/i7o78AEEt5rC9GSct2ZKitLyZ8huLbQe69tpkWwr7T3CWiSWZkZuRFcS6w4klIWk7kohnENMZdpVOUqiQmlmTpurj/ZNwjO6svESuMuIBMgNGl1CNUoaJMNeZtWzbsNJlvSZcRlxkN4AABoOPypD7rUHQtpaMkrddSarqtexJIy4jLbcRM4WrSbPklqS3JWunsMINREt1a97xlsJOzds4z8m/aMiKjHOKb61G2SVZFIUXZJX3ti4/w38Q9QpDji3mZCUpfatmyndKiPcouY9nkGJiBeeubKS2b/ANlsk7kJK9j8qtp7eK9i8tevw2nb21Pjx8/fn4/Rlbp0Jp8nm4jCXSO5KJsiMj8g2gAWiMdmNrTb8U5AABKoAAAAAAAAAAAAAAAAK6wF2wlefX+YxYorrAXbCV59f5jFigB7hEYW7TN+de+KoS57hEYW7TN+de+KoBLgAAAAAAOdqUWU5jehSWkr6yZhzEPKI+xJSlMZCPy9iq34GOiEBUalJYxnRKag09bSokt526dpqbNkk2Pi/WKAT4AAAAAAAAAI2rR5vWSuBnI8eVnz/pW7oc7pKtt290to9UeTIkwyXOiqiyUmaHGzO5XLjSfGk+Ibjchpx51ptxKnWrZ0ke1NyuVxFYho6atFJKXno8hu5tOtOGkyM+I7byPjI94jPhaK9Yi3RtJmR563IqCeU2pJ3dSlRIVtsZEvu/h3RorS7QcxxWkuwXV5jJbhp0B2It9j7HYX4fhu19L1s1HZr05lDmXIlqKam0rMi27S2mdtyf8AuJqlpe4NZTLzG4aeyJe07cRH5bWIxTv+bqzGnHTrX5j/AL9/7h8gsrQ46/JUg5D1rpQfYpSW4i7u89vlG4NKmU5uAg7Ga3FbDWfEV9iUltskuIhui9ezn1ZibTicgAAlmAAAAAAAAAAAAAAAAAAAArrAXbCV59f5jFiiusBdsJXn1/mMWKAHuERhbtM35174qhLnuERhbtM35174qgEuAAAAAAAh5lRYYxNTKetjPIlR5Drb1i/Rk2bZKLu7c6fREwIiaxAXialvPO5am3HkJjt5rZmzNrSHbjsZN84CXAAAAAAAAEbImPqW/wBbrYYYj7HH30mor2uZERGW4jLbcRM4XpSbziGWazJW8SoZssqNN1uqRmUq25P4b7nzd0eUVNpLDipJGy80ZJca3nc92XviPitv5x7p0lx6O2cpKW3VmeRO41pL+LKe0vw4h8RBJU85knK46m6WSItjafmfd/p+NeveGv0xmup8ePv+P0nXqVGgVNK1S46TcWjLpC2LSRHcjI+Iy7owSqkzh6BETV5TriVHozlqb2X4s9t191xODwtKXEGlaSUlRWMjK5GQvjDCbTPeRCkuJJSDJSVFcjI7kZD2IKf1zRafHTRKamVGZMyXHS5lWlPdRfYdu5zCSp8xqoQ2pUc1G26nMWZJkZeQyPcYIbYAAAAAAAAAAAAAAAAAAAAAACusBdsJXn1/mMWKK6wF2wlefX+YxYoAe4RGFu0zfnXviqEue4RGFu0zfnXviqAS4AAAAAACEnUlyTiuk1VLqSbhRpLKkGR3UbptGRl+GjPnITY52pMzFY3oTzRPHBRDmJfNJnkJZqYyZvLsXb+oDogAAAas2XoFIZZRpZTn2G722cajPiSXdG0NSXAafUbqf0UrYaX0l2STLd+JeTdtETnHRfT27vr7NU564MttmpyIuV1CloUlJt2MjK5WMzvv/wBBhXFWqWUhgkzIK1aZLaFkREvZ2XcUWy5bdh93ZZDfbiOSHakf/US2KO18yb9iTZdzyb77xIUtpbUdRuoJtbrinTbL+C53t+Pd8txSPq6Oq0+1G6I69v7T+X7/ALvMVh5ck5Uskpcy5G20ncm0mdz28ZnYr/gX9d0AF4jDktabTkAAEqghK4mosONT6YpTxMkZPQjtZ5PdSfEsuLiPcJsAGFhzSsocJKkZkkrKsrKK/EZcRjMIWt0h6a43KgTn4c5kjJCkqu24W/KtPGm/csflG2mey07HizH2G5zrefREr7R7CPLfeVzAb4AAAAAAAAAAAAAAAAAAAK6wF2wlefX+YxYorrAXbCV59f5jFigB7hC4edbYoSXHlpQhLrt1LOxF+lVxiZPcK3xiy3I6nLLL7aHWXK1CbWhaSNKknU2iMjI95GInpCJnEZd3wrT/AL9E9cn5hwrT/v0T1yfmOV1Rw34u0f2Jv6Q1Rw34u0f2Jv6Rz8mPDl5UeHVcK0/79E9cn5hwrT/v0T1yfmOV1Rw34u0f2Jv6Q1Qw34u0f2Jv6Q5MeDlR4dhGlx5JK63kNPZd+jWSrcwiKhU5DGMKNTEaPraXFlPOXLsszZskmx//ACK/0HN4Rp0Gl9UitNUyFGhtKpMJSkR2ktkZ6aSVzIiLbsHdrYaU8h5TaDdbI0oWaSzJI7XIj4r2LmIb1tujLprbdXLYAAFlgAABhXFaclNyFpzOtkZIM9yb7zIu75RmAATMzPcAABAAAADBIksRkkqQ800RnYjcUSb84z8Yrnqowos+v4TYnRmJLBvSDNt5slpM9F3DE1rutEDueFaf9/ieuT8xHVhNBq7CWpz8J0knmbXpU52ld8hV7pPykOI1Vw9yFSfY2/kGquHuQqT7G38h2cKfKu52T+JKdTZEGJJltrbeImUy1PIMjc3ElVtxq7trX2CW4Vp/3+J65PzFb6q4e5CpPsbfyDVXD3IVJ9jb+QcKfJuWRwrT/v8AE9cn5jOw+0+jOw6h1G7MhRKK/wDQVhqrh7kKk+xt/IS3UkjMQ42JGIjLTDCKw4SW2kElKf0LO4i2EMdb086cZymJy78AAYJAAAAAAAAAAV1gLthK8+v8xixRXWAu2Erz6/zGLFAfOIVtjJo3+pq20TrjJuViGknW7ZkXqbRZiuRlct+0jFk8QrzFX7vYv88g/wC6tCJ7It2l91Vl+NmIvTj9CGqsvxsxF6cfoR5r1VmnVJVPp0uJTShQ0T5c2WybqEtrU4lJEklJ8EszUZlaydh3PLrMY1adptMdjQyqE2aTykNQZTSkKSyskOLS4pSUmnMpNiMyV2W1JGSiLgxLy8WbWqsvxsxF6cfoQ1Wl+NmIvTj9CMErHUFERuXCiypsLrBFUkPNElJR4q8xpcUSzIz2IWeVJGrsd20r4G8ZqYxDV4cyG+qDFmx4yZbbdkNE80yaMxmd1GbjhlZJHYjIzIi2iOpizOzg15iovT28U4hTLdaQytzOxdSEmo0l+qtsNaucb3AFQ8cMRelH6EfDxMhFeap0iBMYbfeVGYlOZCS64SVKNJIzZyKyFGSjSSTtsPaV9A8ZpkUWp1BiBNYiMwnZkaWtCHEOpSkzvlJd0nuMkryGe3uHa8Wv8SvFrx2lIav1HxwxF6UfoQ1fqPjhiL0o3QjHrQk6oUJinzJKW9GmRIaJFmVLSSiLIas6tikmZpIyK+09h20ZuMVqrlNhQIT3Wz1TVBXLWi7azQhzSJKx3SZKQRXUREe21w3X8p36nlJav1HxwxF6UfoQ1fqPjhiL0o/QiHreN3YkCqaCky2pjUN+VDJ82y05Nl2RmnPmQRXSZkvKZlu2jK1jlpBMJmU+SjKlgprhLbyxnHSSaUmWfMq+dO1BKIr79hhu1PJv1PKT1fqHjhiL0o/QjYwE7ORV8R0+dU5dRbhvsky5KyZ0kplKjK6EpLefcEdExlGk1Y4fWE5popq6d10tBE2p9N+xLbc7kkzuRWK1jMj2CSwX+1mMPPxvgJGmla02xLXRteb4tLtAAB1OwAAAO4K26qsRc6uYTZbmSoajekHpYxpJZfot3ZJMv9BZPcHBdUT9p8JedlfBGmj+OET2c7q1K8aK/wCmx0QatSvGiv8ApsdENBbuJdbSpiavTijqjKlkfBysxEThJyX0vcPf/oNuLi3rynHLhUeovJN5TCEmlCM5pMyUeZSiSRFbeZle9iuY9X6VWTVqV40V/wBNjog1aleNFf8ATY6IazmNoyutShwJ0tyRHXJs0lNm0oXlXmUZkRWO/HttsvsGy5ithUlluDClzWlstyHHWSSWjQ4V0nlMyUq5EexJGZBmoatSvGiv+mx0Q+0zDcumFIKDiivs9cOm+7ZTB5lmRJvta7iS5hDsYwncLVBEinuk03LODFiJNvO+tKCWpekNwkkWXblO3FYzPYUgeMo7xw2oUSU89LjuvpMkFla0ayQvOd7FYzPyHbZe5XraKW7o6pTg6r+N+IOeP0QcHVfxvxBzx+iHE07qiTZlKw0RQ2E1SZJZbqDeY8rDalNkak90zJ1uxX2Z+PKY6BWMmnHXW40CS4SjebiuZ27SHWiUakEWbMn7C9qiSXY79pXpFNKfhPVLcHVfxvxBzx+iDg6r+N+IOeP0QgYGNHUYZpVTqlLlIS7CblzHkZCbZSZXNRXVdRWIzypzKIrXIjMiGavYtXEmpiwYj7hJqMWC9JNF20rcW3mQdjuR6NwjJRlluZFcz2Cfb08ZwdUxwdV/G/EHPH6IODqv434g54/RDRk4o0M9UQ6XNJSzcRFWo209cuIQpRoJJqzJuSFGSlESTtv2leHpePi1dp02pQHyeOnNVCoKbU2SYzayOzljVdRHkWokpzKIisZXMiD29PwdXTcHVfxvxBzx+iEhgB+ooxZX6dPq02pR2IUKQ0cvR5kKcXJSqxoSnYZNo39wQDmLY7dYkwlQpmiizGoT8vKWiQ46ls2yLbdVzdSnYR5d6rEZGc/gj94mJf5XTfizRj6ilIpmsJjOXjAXbCV59f5jFiiusBdsJXn1/mMWKOBZ84hXmKv3exf55B/3VoWHxCu8Vfu9i/zyD/urQieyLdpbdYpEx2pHUqLOZg1BbSYzyno5vtutpNSkkaSUkyNJrVYyP+JVyPZlhaxgCHMj00o5w3JEM5B5qpCTNbdU+tK3Vmi6SJZrSR3IyIrqIisZW7iwDzt0w8uLzDi6ngk34yo0GopjRpFNRSZqVxUqNyOnORaPKaEtqs6vblMvs2SVrH6kYMddq85/hZZU+dLjy34ZsEZkphLRIyLvsM1MpNRmR3LYRJPafZAG+TfLhywC0eL41dOY2bkaYuWi8RJvLzoWk0LeM8xpLP2BFYkkVjzbDLzqGa1Vg3p0clT4j8TSR4KWXHNKVjckGlVnllvI7JtdXfbO6AN0m+XH1XB6p1XhS1S4+SOTVlHCScpvJY8rT5GRoSoy2kZKvmUVyI9nwsHvFWY0hFWUmnxqi5UkRCYK6nHCXnJS77Su4ZpsRWLYebeXYgG6TfKuGupk03NlSeEG87sKTBJaYSScWl0iLO65fM4srbTOxH3C2me0XU8QurMT5D9NffNLHXDrtLQt01NJJJG0tSj0RGSSuVlcdjK+zvbBYTvk3y5lGFUo0H97M9HV11X9XvNWfsN//r3+TcN7BX7W4w8/G+AkTHGIfBX7W4w8/G+Aka6E5s29NMzd2gAA7HeAAAA4Hqh/tNhLzsr4I74cD1Q/2nwl52V8EaaP9SET2aB0wjxEmq6XamKcXRZe6slXv/S1hBy8GpfoMKm9dNLKM645/eIxOtOZ1KM8zZnYzLNsO+wyI7HuHWgPXmsSo5KhYMbpEZhhuabiWYL0JN2STcnHM+axbCtusREX4bh4mYLOSzS2DmsaKHHbj6RcNKnkZSIszDlyNpR22/a4h2ACNkYwlx9WwQzUNOtTsZ15U9U5tMyIUhlJqbJs0qQaizbCMyO5WM/INyBhduG5GU2+giZguw8jcdLaf0i0rNRJTYkkRpsReXaZntPpADbGcjiIPU+ixFRFNyj0kfrMyVo95smg1n9r+PRNl5MuzeYz0rBEenVd6W0qESFLecQpMBBSTU7mNWd65morrOxEST3FcyI79gAbIFd1Lqa8I0WJT5dTYcNmCiFplwUrUgkEZIU1mUejMyMs9rmrKVjTYhM1DCbsqpOOs1RTEJ2exUnY5MEo1utm3sNd/sGlpOwiuR7bmXYjqwDZA4tnAjbeKGKz120bjD7z6f7qnTOE4haTS47fMokmssu4iSkkmR7DLSb6nKOtqaiRJp8pyPCap7r0imIdUbTRqyG1mUZNrss7mecjMiO2yx2CAbIHOycMk/wh/ejT15VYtTP9H9g2et+w37b6DfxZt2zbOYI/eJiX+V034s0ZhhwR+8TEv8rpvxZow9VERpkd3jAXbCV59f5jFiiusBdsJXn1/mMWKPMXfDFd4pQ4rqdoWzHkyDZq0WQpEdlT7mRFRbWsyQgjUqyUmdiI9hCxOIcA7Wqxh9BxCp8WQhLjikrJ5RGZKWaiuWXftDuiesPmuNP5OxJ7vz+hDXGn8nYk935/QjHrzV+Ro/r1fSGvNX5Gj+vV9Iw49WHFoya40/k7Enu/P6ENcafydiT3fn9CMevNX5Gj+vV9Ia81fkaP69X0hx6nFoya40/k7Enu/P6ENcafydiT3fn9CMevNX5Gj+vV9Ia81fkaP69X0hx6nFoya40/k7Enu/P6ENcafydiT3fn9CMevNX5Gj+vV9Ia81fkaP69X0hx6nFoya40/k7Enu/P6ENcafydiT3fn9CMevNX5Gj+vV9Ia81fkaP69X0hx6nFoya40/k7Enu/P6EZup86uZW8UT0xZ8eNIfY0RzIbsZS8rKSMyS4lJ2uVr2GrrzV+Ro/r1fSGvVX5Gj+vV9ItXSik5hamjWk5hYoCuteqvyNH9er6Q16q/I0f16vpGrZYoCuteqvyNH9er6Q16q/I0f16vpAWKK96pynY1XwzO60nyY7Dz5OnDhuylIzNWIzS2lRkV+Ow8a9VfkaP69X0hr1V+Ro/r1fSJraazEwIzWWPyXiX3fndEGssfkvEvu/O6ISevVX5Gj+vV9Ia9VfkaP69X0jp5l/EK7YRmssfkvEvu/O6INZY/JeJfd+d0Qk9eqvyNH9er6Q16q/I0f16vpDmX8QbYRmssfkvEvu/O6INZY/JeJfd+d0Qk9eqvyNH9er6Q16q/I0f16vpDmX8QbYRmssfkvEvu/O6INZY/JeJfd+d0Qk9eqvyNH9er6Q16q/I0f16vpDmX8QbYRmssfkvEvu/O6INZY/JeJfd+d0Qk9eqvyNH9er6Q16q/I0f16vpDmX8QbYRmssfkvEvu/O6INZY/JeJfd+d0Qk9eqvyNH9er6Q16q/I0f16vpDmX8QbYRmssbkvEvu/O6ISHU7ccm4yxFPTBqUaKuBBZQ5NgvRc60uSzUSScSkzsS03t3xD3r1V+Ro/r1fSGvVX5Gj+vV9IpqeotqV2ynGDAXbCV59f5jFiivep8y8T7rj6MqlrNZkW4rnf/kWEMEg1n4TDyruIIz8pAADFwZF8EnmDgyL4JPMAAHBkXwSeYODIvgk8wAAcGRfBJ5g4Mi+CTzAABwZF8EnmDgyL4JPMAAHBkXwSeYODIvgk8wAAcGRfBJ5g4Mi+CTzAABwZF8EnmDgyL4JPMAAHBkXwSeYODIvgk8wAAcGRfBJ5g4Mi+CTzAABwZF8EnmDgyL4JPMAAHBkXwSeYODIvgk8wAAcGRfBJ5g4Mi+CTzAABwZF8EnmDgyL4JPMAAHBkXwSeYODIvgk8wAAcGRfBJ5g4Mi+CTzAABwZF8EnmDgyL4JPMAAMsaK0z+qSSfwGyAAP/2Q==" alt="Komponentendiagramm">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_klassendiagramm"><a class="anchor" href="#_klassendiagramm"></a><a class="link" href="#_klassendiagramm">3.2. Klassendiagramm</a></h3>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QL0RXhpZgAATU0AKgAAAAgABAE7AAIAAAAOAAABSodpAAQAAAABAAABWJydAAEAAAAcAAAC0OocAAcAAAEMAAAAPgAAAAAc6gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQW1hbmRhIFdldHRlcgAABZADAAIAAAAUAAACppAEAAIAAAAUAAACupKRAAIAAAADNDQAAJKSAAIAAAADNDQAAOocAAcAAAEMAAABmgAAAAAc6gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAyNDowMTozMCAwODoxNTo1MQAyMDI0OjAxOjMwIDA4OjE1OjUxAAAAQQBtAGEAbgBkAGEAIABXAGUAdAB0AGUAcgAAAP/hBCBodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0n77u/JyBpZD0nVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkJz8+DQo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIj48cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIi8+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iPjx4bXA6Q3JlYXRlRGF0ZT4yMDI0LTAxLTMwVDA4OjE1OjUxLjQzODwveG1wOkNyZWF0ZURhdGU+PC9yZGY6RGVzY3JpcHRpb24+PHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9InV1aWQ6ZmFmNWJkZDUtYmEzZC0xMWRhLWFkMzEtZDMzZDc1MTgyZjFiIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPjxkYzpjcmVhdG9yPjxyZGY6U2VxIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+PHJkZjpsaT5BbWFuZGEgV2V0dGVyPC9yZGY6bGk+PC9yZGY6U2VxPg0KCQkJPC9kYzpjcmVhdG9yPjwvcmRmOkRlc2NyaXB0aW9uPjwvcmRmOlJERj48L3g6eG1wbWV0YT4NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg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" alt="Klassendiagramm">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlUAAAETCAIAAACQjWQJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAASdEVYdFNvZnR3YXJlAEdyZWVuc2hvdF5VCAUAAFg9SURBVHhe7Z0HmF1V1f4/OhYUCb3oBwqKqAiCShFFlC4IAemBhBJCrwkBJIHQCQkQQkIndEIJhF6SEEogCaJ+ls8G+hcbKiLoJ6CI//eed8/LmrXPPXNnMply7/o9+znP6nudc+/dizuThP/6TxAEQRC0HjH/giAIglYk5l8QBEHQisT8C4IgCFqRmH9BEARBK9IS82/s2LEDC+bMmZNMCxPuBZLe/8kfIAQaqQZBEPQ7quYfzjieejjpkql/gltYtWBB5l+9pyE7YH3uBRjQBODWeEd6gLL09/dGEAQtSwfzj2ccDrtk6p/kx3cXKH0aMgIVT3pTzz+MPWcJgiDoX8T8a5TSp6HK9msQLSDp/Z/SBwjZqkEQBP2L7pl/OP1F6ZkIY3K3xwUna1kRZ6cKSrdLvjZvxfxLcXXqWBDAInoaKuueD40g6W2knQrqbZfcBRXdgtIKyVc/V3aqoJE6+QOEYAOE7MR5SfJlMNjKUikTWgjCFEmg0kWVMrBhyZS1x1wZGQNkYQBxuUEQ9Du6Yf7hLGCYcPF5gICrIsYeMTqC80gVIS4AibLYgh3u6HBPQ+n5w6EdJN3kOjrsB8ZGvKDDgO59gLLYXFoc1cUtjGSfkO1D4771HqPdQvXzYFeTNJ4rr4AlZQZB0A9Z0PmnUxXgOLCHLANsEchWzWOALQIYAKwRODUFZUekC4M3D6u3o8N2btNVUyRH+1K0IJdQBfTagimiiGHxaq8LcLejGGsETi0tBeqFYRda9CICGpHielCMzUIpqUxhjBJtBbdvvgW9QDWJjRHOmDIXLDcIgn7HAs2/0gAdIjyzdF64I8xaKmIg0GLPHVpA0svC1JJKgU7t6EAkA5CrdAjJbaALJL1AG5EU0daALc4AoJRqL1A/Mua3oxigsKRXPkDtDirq51T0QBVUWAASsaM2BVYG+RayABmTXqAKSS+7KZCHVT+QIAj6HQs0/+zpg2Ci84unT8UBh2CouFKFvSiQkNFlyQJsA7RQBahAC+jajg4FOJLbkBxlLsC96rUE2BWDSbUXJF9RTdCi29GOsoCuPUCQJ1qK/dt9vaOdKqAK8sqlfeZwCwWrjXxTUGpUrrauDtMWgBag3CAI+h0LNP90NJTC80Jnio4Pd+5ol1K0tcsieXGqgCpRWKd2dNTL0tYiOUwPyFUPDt2OC0AbcoEKb73GBMP0AG3DKisjVUCVKCzvtrSaQ480z6IKqAL1aW9f1NtCBRWgTUG+L8g3ajAMVDcZBEG/YKHPPxtm4+XVLqVoa+XaEyc/sKgCqkRhzG1wR4d7GqoJGCCStc3utkOizbW3A9k+IoDI5KvvdfVzmN6ND9BalCgLgAy0I58YsK3ae0EwA0Bpn8Sl2C1UAYKzgFJjvlGDYaCiySAI+gvd9vPPZCpDdQiq2fgOdyGlJ07eAFVAlbjcBnd05Fn1bp9GQFVhdrvS2yGwyAuStY3cq8YAY0op3bFrDxBUJCpGjSGdFmCbB0hXBVLaJ1A1kExlbeQWUGps5KZAaT/1mgyCoB/RPfMPJFOGilScFAwAFTGlJ05+YCnMHmG0AOUmvTPnFyKZYp8GLaB0O6p5k4AWUK+B5K7zYJOvzZuU9ls4uvcBukQ9HMAAoFJ6YgqjWkppn0C5qgbybl1jpNSYb9RgGKjXZBAE/YiG5l+OziAdBBBwahDIgAH22LLYgwMpjAFwsQiAqjDYGVCaCMFZAEslpUC5eRiBautbYFd8MrWvk0zZcLIxKGJVwO1Y3HVCS4deIAtwYawPYGeALIAxAIKzAJZKSoFy80SqQA0kvaxPWASMtiVYGGONACrtgFmqBiAzTEZZQKkx36jBMFCvySAI+hELOv8Qo7PAogCgY8XRSIzOl9ITp/rAIlAVVprrsDEW2Blg2wbaTj1QBVRB0g3udlTc0YiXdHg7bkeiLDUPFCkUptw8URYhi31ieXGiOqV9kootlJ5bQKkx36jBMFDRZBAE/YUO5h8+56XYAwK4SHjzMyX5CmgB9vjIi4DkK+rQblNKjUB2VaDqwqp3dCjYxdgirJ8Uc+jbGKVTZQqwMaBiF1DaZx5jwyDTrh1BqRHIrgpUFVaaaBtgIsNUBAJfd8YQWoBiaHctEXkhAFmqG2vQuCC5QRD0O6rm34KD04FHG86LZCqAWmoPmhi96G5m1LMHQRAsVBbu/NPRlvQ24shrQfBtiS960tuQPd4MQRD0JD00/3DGQSY67yCkuKAFwEuv153vBEALgJzigiAIeoSFO/+APeMscd61IPpPH0e8GYIg6HkW+vwDcwpwxpH4MVcrE2+GIAj6CD0x/4IgCIKgrxHzLwiCIGhFYv4FQRAErUjMvyAIgqAVifkXBEEQtCIx/4IgCIJWJOZfEARB0IrE/AuCIAhakZh/QRAEQSsS8y8IgiBoRWL+BUEQBK1IzL8gCIKgFYn5FwRBELQiMf+CIAiCViTmXxAEQdCKxPwLgiAIWpGYf0EQBEErEvMvCIIgaEVi/gVBEAStSMy/IAiCoBUpmX/PPffc+cH558+YMSM9kSAIgqDpKJl/48aNW2KJxT/ykVXWWefDrbk+9rE13vvepY866qj0RIIgCIKmo3z+rbHGytOnj//f/72jNdfzz9/0xS9+OuZfEARBE1M+/z760dV/8IPb/vOf51pz/f3vT2611cYx/xphzpw5AwuS3kt02MbYsWPhxTXpQRC0PDH/SlbPzD+cxasacDrjEE++/oPuIum9RIdt4PHCWzEggyBoNWL+lawemH9u+BHNPwhQ+8Vh3YX5x1GUlG4i5l8QBJ2l0fn3/e/fctBB3/zOd260Rq477jj/7LMPf/31J667bvQll5z4zjs+oA+uV16ZefrpQ++550Jn5+qB+cfDWscxf3xHGVQf1ggmSS8jD8gtjjwgtwi56g0eBoCktwFLabwozXLkAV2ef9wOJL093e4KgqDv0Oj8u+++ixZbbNE777zAGjEnZsyYdOqpB40Ysf9rrz2OAbnTTlu88858G9MH14sv3nPVVd9ea63VR48+xLm4emz+4dROukFHueBhiisPcQFV5ywEGiUQVHMFFyQF2GA0oJaSu6x/WOq5kE4XsF7Y7aY0QrAxKgtkT3rbwAOsQ1XbweiacTvmXtrt7RO5gMuyHQZB0NdYoPn3s59NW3fdNc855wiq/WX+TZgw/L8Ken3+AXvmgvx4BYqhigMXUAZ0uUQbQBZGClAMAwBnAOyEXk4CqQIWZtlIlwWoEltEAdwUUFWMHh0tuFIFDICFLkKXqlkvXZSBXLjSpSwIdFGmNwiCvkbX59+0aWP33Xf7KVNO//nPp9Hi5t/rr8/G90JYuNzsRNiYMcPkRR3rxRo//nh5J04c4bz4Aifveecd6bz11ltvPXPaaQefdNIBV199Gu6xF+efzkqAs1LHNJE96W3YMFWgqsmUH8e5hWqnUri1UmBnACJpoZpDr+JdD0RluQtgmLLoBa6N0luTrGqAfSoeWK9LyW9KwbSrMdkhOJdtKQiCPkhX5t+bbz4D9YwzDh05cvDvfveQYuz8++lP75o8+eRjjtn7wAN35kL8vfde9OabOC+e+9Wv7sUAO+GE/eTFWLrzzvNfe202vL///cM33HAGppS8J588+Oabz/rjHx+F9y9/mXnbbeeeeuqB8g4fPujaa0e99NID8Favt9569sILj73ppjN//ev7N9zwE704/wBOTJ2zQOcmoMUe1gJZiATK5RGcn7+yMADAZS1dSMkHgwKSXoBg2Am9EOiShSpR2SKjhtuIsn0gDJAFKYyxAl3ExZO8T96mVACZwSRZi1J6SgCy7EW9GrTYsCAI+g6dnn9vvDHnF7+4e7vtNh01yg8PO/8wY9ZZ5yNz506RF1Nq880/++c/z4CM746LLrro9Onj5b3oouM322z9F164B/Ls2Vcuu+wy1103Wl58O1xvvbWef772p2/Q2FprrTZu3HHyTp167pJLLvHggxNk6XD1hflHdG4CnJg0UnWHtc5TB49X1VERWXT+uhO5Cyn5FFFK0uv0qS3kpUpYthQGULb7uk7yTXULpMN4oizGC/WPAOuCzJR6BYHrJAiCPkKn59/991+81Vafv+GGMb/85b02AMvOv5dffmTevCmvv177PsdVPf9+85sHvvvdm95442nI+fz7wx8enj//+r/97QnITTb/CA9Knc5OBThDZXQHLlUF2JOaFgaABU/R0U8vUApVBaimU1WQKmEWb83BAKaoCFAKVZUVchEXrxhugSst2hFAZhaxuzsXLGoAArwWpgRB0Nfo3Pzbb7/tzzjj0JNOOuDMMw+bOXOyDcByv//7xz+evvHGMeeeeyTXl7+8oebfD384dcSI/ceMGSbv449fwSysF1+cji+X2Ejehx56d7Zx/u2445fk3Wef7frX/MuPxXqnM1WAeBp1Cuv8Zak8QBbtpTO6yylSlaI2rGo7p1fxqkCVlBot9KoIcBvZCpLrxec3rhTduMiDhbIgV4QFQdA36dz8W331FUeOHPzaa7MxCEeMOOAXv7j7zTefUYydf6++Omvu3Cm77LLluuuuyTVgwAc1/7D+/e/5w4btJu8ppwx54YV73nrr3WqYsvIeffSeP/vZXRiosHP+rbTScvJifeYzaz/55FXK7XD1+vzjWYnjGMclj2agw1cWBgCbAhkWqoBZCoCLRWRhAFBWl1PsvpCtynh7L/BKhcwApfDWtJGMTBTWKxWwMq5U4WKMU5Xi4unVdlQB+4GdLut1Ltgh0FWUfPfeFcAYeoMg6Gt0bv5deunw3//+4bffnof5gS9eX//6FzACFWPn3x13nPe5z617990X/vSnd3HBa+cf1m9/+6C8+EK53Xab/epX7/5MFRvJe/HFJ2y66frf//4tsHP+YQzLi4XpiKGl3A5XH5l/FpyVyd1+zAC6ciMFnsuqqTqyMAAseIq1EDcDci8t2gLQRTQeXCJRllMB983TqQI1xs7rxROpNtjiOrHkXVm0YxAEfY1O//5Plvnzr8cIxLdA/SDUzr+rrz4NX/ieeupqyC+//Oh55x258cbraf6h+Ikn7vejH01lItbZZx/xyU+u+bOf1f4qBb4InnrqgfPn3yDv5Mknr7zyAP5pGs4/+/s/zMURI/b/yU/ulKXD1eu//8M5C3B0Eh67FutNJmNkPFXlWhdxFsZbi1OBs+QpQEaqVgbyAlog2HRQWhbYXOvKLYosVYEszKoIAFIZ7LyARlDPLjoMCIKgj9D1+Yf10ksP7LvvdmeeOex737v5n/981s6/+++/eJttNrnhhjFPPHElsnbZZcvVV19R8w/GLbbY4IorToHANWbMsP32255/hwHVtttuU3znk/fCC4/Zeecv//jHt8P74ov37LHH18855wh5L7vspC233OjZZ6+Dt8HV6/MvCIIg6F0WaP69/fa8v/718ZEjB2+77SZ//vNjdv69+eYz+Br3ta99YbnlPrDRRp987rkbjjxyD82/t9569k9/emy33baCl+vkkwejFArC+69/zf3LX2YdeODO8h522O6vvjoLdm766quPH3/8vvLus892r7wyEwMY3gZXzL8gCIIWp9H5h29m11032v5+TguzDd/23nhjztNPXz1jxiTZ33xzDuzXXjv6rrsuwGybP/+GBx64mH//HQtj8rHHJsHLlf/L2k8+eZW8c+Zc47zz5k2Rd9asy523w4UJN336uO9+92Zn54r5FwRB0PQ0Ov/6xXrxxemYtfUWRqaLr7di/gVBEDQ9TTX/Jk8eudhii9Zbe+21jYuvt2L+BUEQND1NNf9+9at77713fL1V+j8vLF0x/4IgCJqe8vm3wgofGjXqkMsvP6U114QJ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" alt="Legende Klassendiagramm" width="350">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_klassenbeschreibung"><a class="anchor" href="#_klassenbeschreibung"></a><a class="link" href="#_klassenbeschreibung">4. Klassenbeschreibung</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_topic_stammdaten"><a class="anchor" href="#_topic_stammdaten"></a><a class="link" href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a></h3>
+<div class="paragraph">
+<p>Das Topic <code>Stammdaten</code> umfasst alle statischen Werte. Darunter fallen z.B. die Aufzählwerte von Listen (INTERLIS-Datentyp «Aufzählung»). Jede Liste wird in einer eigenen Klasse modelliert.</p>
+</div>
+<div class="paragraph">
+<p>Die Stammdaten werden durch die zuständige Stelle vorgegeben. Bei Bundesthemen ist dies das für die Modellierung zuständige Bundesamt. Bei kantonalen Themen das zuständige kantonale Amt. Die Stammdaten von Bundesthemen können auf der Stufe Kanton erweitert werden. Die kantonalen Erweiterungen werden bei der Überführung ins Bundesmodell den entsprechenden Bundestypen zugeordnet. Bei Bedarf werden die Stammdaten durch die Abteilung Geoinformation nachgeführt und im <a href="https://github.com/ch-sz-geo/A000_template/tree/main/data">data-Verzeichnis</a> des jeweiligen Themas veröffentlicht.</p>
+</div>
+<div class="sect3">
+<h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Katalogeintrag</code> enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte <code>Katalogeintrag</code>, sondern nur Objekte von den spezialisierten Klassen.</p>
+</div>
+<div class="paragraph">
+<p>Spaltenbreite Variante 1:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 60%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe <a href="https://www.interlis.ch/dokumentation">INTERLIS-Referenzhandbuch</a>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in_Aenderung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in Änderung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SortierNr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reihenfolge des Katalogeintrages in der Auswahlliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Spaltenbreite Variante 2:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe <a href="https://www.interlis.ch/dokumentation">INTERLIS-Referenzhandbuch</a>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in_Aenderung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in Änderung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SortierNr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reihenfolge des Katalogeintrages in der Auswahlliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_standard_katalogeintrag"><a class="anchor" href="#_klasse_standard_katalogeintrag"></a><a class="link" href="#_klasse_standard_katalogeintrag">4.1.2. Klasse <code>Standard-Katalogeintrag</code></a></h4>
+<div class="paragraph">
+<p>Die Verbindlichkeit kam mit der Aufnahme der statischen Waldgrenzen in den ÖREB-Kataster. Sie ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><em>Diese Klasse führt keine zusätzlichen Attribute</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Anforderungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock">Die Werte müssen eindeutig sein</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_separate_stammdaten"><a class="anchor" href="#_klasse_separate_stammdaten"></a><a class="link" href="#_klasse_separate_stammdaten">4.1.3. Klasse <code>separate Stammdaten</code></a></h4>
+<div class="paragraph">
+<p>Über den Typ wird die Art der Geometrie festgelegt.</p>
+</div>
+<div class="paragraph">
+<p>In der Klasse <code>Typ</code> wurde anfänglich auch der Typ des Wirkbereiches aufgeführt. Weil ein Wirkbereich jedoch stets gleich symbolisiert wird, wurde entschieden, auf diesen Eintrag zu verzichtet.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe <a href="https://www.interlis.ch/dokumentation">INTERLIS-Referenzhandbuch</a>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ausserhalb_Bauzonen_statisch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Waldgrenze ausserhalb Bauzone (statisch)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Abkuerzung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kurzform des Katalogeintrages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WGraB_s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SortierNr</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reihenfolge des Katalogeintrages in der Auswahlliste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Symbol</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bild des Legendeneintrages; codiert als Base64-Wert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iVBORw0KGg&#8230;&#8203; (gekürzt)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_topic_fachdaten"><a class="anchor" href="#_topic_fachdaten"></a><a class="link" href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a></h3>
+<div class="paragraph">
+<p>Das Topic <code>Fachdaten</code> umfasst die eigentlichen, fachlichen Klassen des Themas.</p>
+</div>
+<div class="sect3">
+<h4 id="_klasse_klasse1"><a class="anchor" href="#_klasse_klasse1"></a><a class="link" href="#_klasse_klasse1">4.2.1. Klasse <code>Klasse1</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Klasse1</code> führt &#8230;&#8203;..</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>gueltigBis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2030-12-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentliche Bemerkung zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist eine öffentliche Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung_intern</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung, welche den Katalogeintrag näher beschreibt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">amtsintern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Variante mit Fremdschlüssel-, Geometrie- und Bedingungsattributen:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Fachattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fortlaufende, einfach aufgebaute Kennung, welche sich zur Identifikation eignet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GA1159</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>KennungAlt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nummer aus dem alten geologischen Archiv; entspricht "IDAlternate" aus DM_GeolAssets_V2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GA01.2.1461</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Titel</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Titel des Dokuments; entspricht "IDAlternate" aus DM_GeolAssets_V2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UVP:GeolGeotecGutachtenzumVorprojekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Erstelldatum</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum des Berichtes; entspricht "DateCreation" aus DM_GeolAssets_V2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1985-03-21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Dokumentlink</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link, über den auf das Dokument zugegrifen werden kann; Pfad zum Speicher- bzw. Ablageort des Dokuments</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q:...\2021-01-18-0303_NB_Standseilbahn_Stoos_Bauproj_KL.pdf</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Baugesuchsnummer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kennung des Baugesuches, welches mit dem Dokument in Verbindung steht</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B2019-0421</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Autor</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kennung der Objekt-ID des Unternehmens, welches den Bericht verfasst hat. Auf eine ausmodellierte Beziehung wird der Einfachheit halber verzichtet, so dass hier nur die ID eingetragen werden muss.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2a150ef7-eb3d-4661-99d6-52d6eb7a5fd0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bemerkung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kommentar zum entsprechenden Dokument; entspricht "Description" aus DM_GeolAssets_V2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das ist meine Bemerkung zu diesem Dokument.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rGeometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zur Geometrie, welche mit dem Dokument verknüpft ist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rInhalt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fremdschlüssel zum Inhalt (Stammdaten); entspricht "Kind" aus DM_GeolAssets_V2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e0807260-956b-40a2-871a-e32c51ebf192 (für "Bohrprofil")</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
+<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Die Werte müssen innerhalb der Klasse eindeutig sein.</p>
+</li>
+<li>
+<p>Nach der Vergabe muss der Wert unverändert bleiben.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+<col style="width: 60%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Anzahl</th>
+<th class="tableblock halign-left valign-top">Typ</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Katalogeintrages; entspricht dem Wert der Aufzählung in einem INTERLIS-Modell. Der Code beinhaltet den "Wert für die Maschine" und dient z.B. zur Steuerung einer Applikation (z.B. Farbvergabe); Änderungen am Code sind mit allen Parteien, die am Datenaustausch beteiligt sind, abzusprechen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zahl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">für den Benutzer lesbarer Name des Katalogeintrages Der Name beinhaltet den Wert "für den Menschen".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SortierNr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zahl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Sortiernummer bestimmt die Position eines Wertes in der Liste: je tiefer die Zahl, desto weiter oben steht der Wert in der Liste.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bemerkung</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterungen zum Objekt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modelltransformationen"><a class="anchor" href="#_modelltransformationen"></a><a class="link" href="#_modelltransformationen">5. Modelltransformationen</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_transformation_vom_bearbeitungsmodell_ins_publikationsmodell"><a class="anchor" href="#_transformation_vom_bearbeitungsmodell_ins_publikationsmodell"></a><a class="link" href="#_transformation_vom_bearbeitungsmodell_ins_publikationsmodell">5.1. Transformation vom Bearbeitungsmodell ins Publikationsmodell</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Quellmodell: <a href="https://raw.githubusercontent.com/ch-sz-geo/A064/refs/heads/main/models/SZ_Schutzwald_V1_Bearbeitung.ili">Bearbeitungsmodell "SZ_Schutzwald_V1" (Version: 2025-01-23)</a></p>
+</li>
+<li>
+<p>Zielmodell: <a href="https://raw.githubusercontent.com/ch-sz-geo/A064/refs/heads/main/models/SZ_Schutzwald_V1.ili">Publikationsmodell verwaltungsintern "SZ_Schutzwald_V1_Bearbeitung" (Version: 2025-01-23)</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transformation_ins_minimale_geodatenmodell_des_bundes"><a class="anchor" href="#_transformation_ins_minimale_geodatenmodell_des_bundes"></a><a class="link" href="#_transformation_ins_minimale_geodatenmodell_des_bundes">5.2. Transformation ins minimale Geodatenmodell des Bundes</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Quellmodell: Das hier beschriebene Datenmodell</p>
+</li>
+<li>
+<p>Zielmodell: <a href="http://models.geo.admin.ch/BAFU/todo">&lt;Modellname&gt; (Version: 2023-03-20)</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transformation_ins_transfermodell_öreb_kataster"><a class="anchor" href="#_transformation_ins_transfermodell_öreb_kataster"></a><a class="link" href="#_transformation_ins_transfermodell_öreb_kataster">5.3. Transformation ins Transfermodell ÖREB-Kataster</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Quellmodell: Das hier beschriebene Datenmodell</p>
+</li>
+<li>
+<p>Zielmodell: <a href="https://models.geo.admin.ch/V_D/OeREB/OeREBKRMtrsfr_V2_0.ili">OeREBKRMtrsfr_V2_0 (Version: 2021-04-14)</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_klasse_darstellungsdienst"><a class="anchor" href="#_klasse_darstellungsdienst"></a><a class="link" href="#_klasse_darstellungsdienst">5.3.1. Klasse <code>DarstellungsDienst</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielattribut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ch.sz.a094b.oereb.wald.statische_waldgrenze.linie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>VerweisWMS</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_eigentumsbeschraenkung"><a class="anchor" href="#_klasse_eigentumsbeschraenkung"></a><a class="link" href="#_klasse_eigentumsbeschraenkung">5.3.2. Klasse <code>Eigentumsbeschraenkung</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielattribut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Wert für <code>Rechtsstatus</code> wird regelbasiert abgeleitet (siehe unten)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rechtsstatus</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem die Publikation im ÖREB-Katastersystem erfolgt; wird durch den Publikationsprozess gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>publiziertAb</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(aktuell nicht verwendet und daher leer)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>publiziertBis</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Regeln für die Ableitung des Wertes für <code>Rechtsstatus</code>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Regel</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Rechtsstatus</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Der Wert von <code>Waldgrenze.Begruendungsverfahren</code> muss gesetzt sein und der Wert von <code>Waldgrenze.Aufhebungsverfahren</code> muss leer sein.<br>
+Zudem darf der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code> (hergeleitet über <code>Waldfeststellung.rVerfahrensstatus</code>) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>laufendeAenderung_Begruendung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Wert von <code>Waldgrenze.Begruendungsverfahren</code> muss gesetzt sein und der Wert von <code>Waldgrenze.Aufhebungsverfahren</code> muss leer sein.<br>
+Zudem muss der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code> (hergeleitet über <code>Waldfeststellung.rVerfahrensstatus</code>) den Wert 'abgeschlossen' aufweisen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>inKraft</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Werte von <code>Waldgrenze.Begruendungsverfahren</code> und <code>Waldgrenze.Aufhebungsverfahren</code> müssen gesetzt sein.<br>
+Zudem darf der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code> des Aufhebungsverfahrens (hergeleitet über <code>Waldfeststellung.rVerfahrensstatus</code>) nicht einer der folgenden Werte aufweisen: 'abgeschlossen', 'abgeschlossen_ohne_Verfuegung', 'unbekannt'.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>laufendeAenderung_Aufhebung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die Werte von <code>Waldgrenze.Begruendungsverfahren</code> und <code>Waldgrenze.Aufhebungsverfahren</code> müssen gesetzt sein.<br>
+Zudem muss der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code> des Aufhebungsverfahrens (hergeleitet über <code>Waldfeststellung.rVerfahrensstatus</code>) den Wert 'abgeschlossen' aufweisen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>inKraft_Aufhebung</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_geometrie"><a class="anchor" href="#_klasse_geometrie"></a><a class="link" href="#_klasse_geometrie">5.3.3. Klasse <code>Geometrie</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielattribut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Punkt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Waldgrenze.Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Linie</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Flaeche</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">analog <code>Eigentumsbeschraenkung.Rechtsstatus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rechtsstatus</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">analog <code>Eigentumsbeschraenkung.publiziertAb</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>publiziertAb</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">analog <code>Eigentumsbeschraenkung.publiziertBis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>publiziertBis</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.geocat.ch/geonetwork/srv/ger/catalog.search#/metadata/8646c41b-543e-401f-836d-4b6beca7370d">Link auf GeoCat</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MetadatenGeobasisdaten</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_legendeeintrag"><a class="anchor" href="#_klasse_legendeeintrag"></a><a class="link" href="#_klasse_legendeeintrag">5.3.4. Klasse <code>LegendeEintrag</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielattribut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Typ.Symbol</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Symbol</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Typ.Name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LegendeText</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Typ.Code</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ArtCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="https://data.geo.sz.ch/public/Themen/A057b/">Legende.xml</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ArtCodeliste</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fix: " <code>ch.StatischeWaldgrenzen</code> "</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Thema</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SubThema</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transformation_ins_webgis"><a class="anchor" href="#_transformation_ins_webgis"></a><a class="link" href="#_transformation_ins_webgis">5.4. Transformation ins WebGIS</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Quellmodell: Das hier beschriebene Datenmodell</p>
+</li>
+<li>
+<p>Zielmodell: keines (siehe unten)</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_allgemeines_2"><a class="anchor" href="#_allgemeines_2"></a><a class="link" href="#_allgemeines_2">5.4.1. Allgemeines</a></h4>
+<div class="paragraph">
+<p>Für die WebGIS-Publikation werden die Daten optimiert. Dies ist häufig mit einer Denormalisierung verbunden ("flachwalzen" der Daten). Der Attributumfang richtet sich nach den Anforderungen der zuständigen Stelle und ist im Normalfall geringer als im Ausgangsmodell. Eine weitere Besonderheit kommt den Tabellen der WebGIS-Datenbank zu. Sie weisen Standard-Spalten auf, welche nicht Teil des Datenmodells sind. Es handelt sich um folgende Spalten:</p>
+</div>
+<div class="paragraph">
+<p><strong>Standardspalten:</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Spaltenname</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eindeutige Identifikation des Objektes; kann von der OID der Ausgangsdaten abweichen, falls Objekte zum Zweck der Publikation aufgeteilt werden müssen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>etl_dt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zeitstempel, an dem der Datensatz in die Tabelle geschrieben wurde (etl: extract - transfer - load)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>etl_job</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name des Jobs, mit dem die Daten auf die Tabelle geschrieben wurde</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>asof_dt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem am Datensatz die letzten Änderungen vorgenommen wurden. Dieser Wert wird in den Metadaten des Datensatzes nachgeführt.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Das WebGIS bezieht die Daten direkt aus der Datenbank. Aus diesem Grund wird nachfolgend von "Tabelle" und "Spalte" anstelle von "Klasse" und "Attribut" gesprochen. Der Klassenname erscheint lediglich in der Überschrift.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tabelle_der_waldgrenze"><a class="anchor" href="#_tabelle_der_waldgrenze"></a><a class="link" href="#_tabelle_der_waldgrenze">5.4.2. Tabelle der <code>Waldgrenze</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielspalte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Standardspalten gemäss den Angaben oben)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Typ.Code</code><br>
+hergeleitet über <code>Waldgrenze.rTyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>typ</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Typ.Name</code><br>
+hergeleitet über <code>Waldgrenze.rTyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bezeichnung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Waldgrenze.Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geom</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_tabelle_der_stockgrenze"><a class="anchor" href="#_tabelle_der_stockgrenze"></a><a class="link" href="#_tabelle_der_stockgrenze">5.4.3. Tabelle der <code>Stockgrenze</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielspalte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Standardspalten gemäss den Angaben oben)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verfahren.Verfuegungsnummer</code><br>
+hergeleitet über:<br>
+<code>Stockgrenze.rWaldgrenze</code> &#x2192;<br>
+<code>Waldgrenze.Begruendungsverfahren</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>verfuegung_datum_nr</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stockgrenze.Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geom</code></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all" style="width: 25%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>1</em></p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock"><strong>2</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock"><strong>4</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>5</em></p></td>
+<td class="tableblock halign-center valign-middle" colspan="2" rowspan="2"><p class="tableblock"><code>6</code></p></td>
+<td class="tableblock halign-left valign-bottom" rowspan="3"><p class="tableblock"><code>7</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>8</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>9</em></p></td>
+<td class="tableblock halign-right valign-top" colspan="2"><p class="tableblock"><code>10</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-04-28 12:48:35 UTC
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+</body>
+</html>

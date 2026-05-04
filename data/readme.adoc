@@ -1,0 +1,23 @@
+= Dateibeschreibung
+
+Die Datei `+Stammdaten.xtf+` enthält die Stammdaten. Alle Änderungen an dieser Datei werden dort vorgenommen und über GitHub mit einer eindeutigen Identifikationsnummer (Commit-Hash-ID) versehen. Mithilfe dieser ID können frühere Versionen der Datei jederzeit abgerufen werden.
+
+Die folgende Tabelle fasst die relevanten Versionen der Stammdaten zusammen:
+
+[cols=*,options="header"]
+|===
+| Dateiname | Beschreibung | Modell (Version) | aktuell
+| https://raw.githubusercontent.com/ch-sz-geo/A057/main/data/Stammdaten.xtf[*Stammdaten.xtf*]
+| Diese Datei enthält die aktuell gültigen Stammdaten für die Datenerfassung.
+| SZ_Waldfeststellungen_V2 (2023-09-08)
+^a| ✅
+| https://raw.githubusercontent.com/ch-sz-geo/A057/975ed27935c993bc6133e3471760b7fd27ca4b08/data/Stammdaten.xtf[*Stammdaten_2025-02-05.xtf*]
+| Diese Datei enthält die Stammdaten für die Datenerfassung nach dem rechts aufgeführten Datenmodell. +
+Im Vergleich zur Vorversion (2000-01-01) wurde der Typ des Wirkbereichs ergänzt.
+| SZ_Waldfeststellungen_V2 (2023-09-08)
+^a| ⬜
+| https://raw.githubusercontent.com/ch-sz-geo/A057/d9f4d0431493d536b0b97b7a6766bf9d42efa508/data/Stammdaten.xtf[*Stammdaten_2000-01-01.xtf*]
+| Diese Datei enthält die Stammdaten für die Datenerfassung nach dem rechts aufgeführten Datenmodell.
+| SZ_Waldfeststellungen_V2 (2023-09-08)
+^a| ⬜
+|===

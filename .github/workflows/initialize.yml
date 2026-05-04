@@ -1,0 +1,155 @@
+name: Initialize Repository
+
+on:
+  #Triggers when the repository is created
+  push:
+   branches: [main, master]
+   paths:
+    - 'init'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: my-shared-group
+  cancel-in-progress: true
+  
+jobs:
+  first-Initialisation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate GitHub App Token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}  # scopes token to whole org
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: "${{ steps.generate-token.outputs.token }}"
+      
+      - name: dispatch to Default designe 
+        env:
+          GH_TOKEN: "${{ steps.generate-token.outputs.token }}"
+        run: |
+          response=$(curl -s -w "\n%{http_code}" \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            https://api.github.com/repos/ch-sz-geo/A000_defaultDesign/dispatches \
+            -d '{"event_type":"add-dispatch-step","client_payload":{"ref":"main", "repo_name": "${{ github.event.repository.name }}" }}')
+
+          #This section is to fail the task when the dispach to the target repo didn't work
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | head -n -1)
+          
+          echo "HTTP Status: $http_code"
+          echo "Response: $body"
+          
+          if [ "$http_code" -ne 204 ]; then
+            echo "::error::Dispatch failed with status $http_code: $body"
+            exit 1
+          fi
+      
+      - name: updtate the initialize.yml
+        env:
+          GH_TOKEN: "${{ steps.generate-token.outputs.token }}"
+        run: |
+          ls
+          cd .github/workflows
+          touch temp.yml
+          sed -n '1,16p' initialize.yml > temp.yml
+          sed -n '83,84p' initialize.yml >> temp.yml
+          sed -n '87,156p' initialize.yml >> temp.yml
+
+          mv temp.yml initialize.yml
+
+          cd ../..
+          
+          git pull
+          git status
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          
+          git add .github/workflows/initialize.yml
+          git status
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "updated the initialize.yml"
+          git push
+          
+          
+  init-files:
+  
+    needs: first-Initialisation
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write  
+      actions: write
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # cancle any runs of the main.yml
+      - name: Cancel running Pages Publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          RUN_IDS=$(gh api /repos/${{ github.repository }}/actions/workflows/main.yml/runs \
+            --jq '[.workflow_runs[] | select(.status == "in_progress" or .status == "queued")] | .[].id')
+          
+          for RUN_ID in $RUN_IDS; do
+            echo "Cancelling Pages Publish run $RUN_ID"
+            gh api --method POST /repos/${{ github.repository }}/actions/runs/$RUN_ID/cancel
+          done
+    
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Apply initialization from init.txt
+        run: |
+          fileList=("README.adoc" "index.html" "docs/modelldokumentation/modelldokumentation.adoc" "docs/modelldokumentation/allgemeines.adoc")
+          while IFS=: read -r keys value; do
+            # Remove parentheses 
+            keys=${keys#(}
+            keys=${keys%)}
+            #Splitts the keys by comma
+            IFS=',' read -ra key_array <<< "$keys"
+            
+            # Trim whitespace from the value
+            value=$(echo "$value" | xargs)
+
+            # Replace each key in README.adoc and index.html
+            for key in "${key_array[@]}"; do
+              key=$(echo "$key"| xargs)
+              safe_key=$(printf '%s\n' "$key" | sed 's/[.[\*^$(){}+?|<>]/\\&/g')
+              echo "Key - $key"
+              for file in "${fileList[@]}"; do
+                  if [[ "$key" =~ ^[[:alnum:]_[:space:]]+$ ]]; then
+                  sed -i "s/\\<$safe_key\\>/$value/g" "$file"
+                else
+                  sed -i "s/$key/$value/g" "$file"
+                fi
+              done
+            done
+            for key in "${key_array[@]}"; do
+              if [[ "$key" =~ ^[[:alnum:]_[:space:]]+$ ]]; then
+                sed -i "s/\\<$safe_key\\>/$value/g" init 
+              else
+                sed -i "s/$key/$value/g" init
+              fi
+            done
+          done < init
+
+      - name: Commit and push changes
+        run: |
+          git pull
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git status
+          git add README.adoc index.html 
+          git commit -am "Initialize files from init.txt"
+          git push
